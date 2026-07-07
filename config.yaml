@@ -1,0 +1,6 @@
+vault:
+  rotation_days: 30               # auto‑rotate secrets every N days
+  key_file: "vault.key"           # where to store encryption key
+  data_file: "vault_data.json"    # encrypted data storage
+  log_file: "vault.log"
+  port: 5003                      # API server port

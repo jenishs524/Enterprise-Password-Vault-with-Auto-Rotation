@@ -1,0 +1,70 @@
+2026-07-07 00:38:45,921 - INFO - New encryption key generated.
+2026-07-07 00:38:45,929 - INFO - Vault server starting on port 5003...
+2026-07-07 00:38:45,950 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.18.217:5003
+2026-07-07 00:38:45,951 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-07 00:38:49,669 - INFO - 127.0.0.1 - - [07/Jul/2026 00:38:49] "GET / HTTP/1.1" 200 -
+2026-07-07 00:38:49,771 - INFO - 127.0.0.1 - - [07/Jul/2026 00:38:49] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:38:49,819 - INFO - 127.0.0.1 - - [07/Jul/2026 00:38:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-07 00:38:54,772 - INFO - 127.0.0.1 - - [07/Jul/2026 00:38:54] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:38:59,771 - INFO - 127.0.0.1 - - [07/Jul/2026 00:38:59] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:04,771 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:04] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:05,885 - INFO - Data saved.
+2026-07-07 00:39:05,886 - INFO - Secret 'Jenik Shrestha' added.
+2026-07-07 00:39:05,887 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:05] "POST /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:05,903 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:05] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:05,933 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:05,934 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:05] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:09,776 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:09] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:09,804 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:09,806 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:09] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:14,767 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:14] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:14,773 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:14,774 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:14] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:19,769 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:19] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:19,778 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:19,779 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:19] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:24,774 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:24] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:24,793 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:24,794 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:24] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:29,776 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:29] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:29,795 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:29,796 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:29] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:34,775 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:34] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:34,801 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:34,802 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:34] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:39,773 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:39] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:39,799 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:39,800 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:39] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:44,773 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:44] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:44,798 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:44,799 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:44] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:49,773 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:49] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:49,815 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:49,819 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:49] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:54,772 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:54] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:54,791 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:54,794 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:54] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:39:59,773 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:59] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:39:59,792 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:39:59,795 - INFO - 127.0.0.1 - - [07/Jul/2026 00:39:59] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:04,767 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:04] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:04,771 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:04,772 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:04] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:09,769 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:09] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:09,777 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:09,778 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:09] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:15,069 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:15] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:15,128 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:15,129 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:15] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:20,071 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:20] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:20,105 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:20,105 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:20] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:24,769 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:24] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:24,782 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:24,783 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:24] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -
+2026-07-07 00:40:29,827 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:29] "GET /api/secrets HTTP/1.1" 200 -
+2026-07-07 00:40:29,835 - INFO - Secret 'Jenik Shrestha' accessed.
+2026-07-07 00:40:29,836 - INFO - 127.0.0.1 - - [07/Jul/2026 00:40:29] "GET /api/secrets/Jenik%20Shrestha HTTP/1.1" 200 -

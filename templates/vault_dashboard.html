@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Vault Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0b0e14; color: #e0e0e0; padding:20px; }
+        .container { max-width:1200px; margin:auto; }
+        h1 { color: #f9e2af; border-bottom:2px solid #4a90e2; padding-bottom:10px; }
+        .card { background: #1e2430; padding:15px; border-radius:8px; margin:10px 0; }
+        .secret-item { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; border-bottom:1px solid #2a3142; }
+        .secret-name { font-weight:bold; color:#89b4fa; }
+        .secret-meta { color:#888; font-size:0.8em; }
+        .btn { padding:6px 12px; border:none; border-radius:4px; cursor:pointer; margin:0 4px; }
+        .btn-rotate { background:#ffd93d; color:#1a1a2e; }
+        .btn-delete { background:#ff6b6b; color:white; }
+        .btn-add { background:#4a90e2; color:white; padding:8px 16px; }
+        .form-group { margin:10px 0; }
+        input[type="text"], textarea { background:#2a3142; border:1px solid #4a90e2; color:white; padding:8px; border-radius:4px; width:100%; }
+        textarea { height:60px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Password Vault</h1>
+        <div id="secrets-list"></div>
+        <div class="card">
+            <h3>Add New Secret</h3>
+            <div class="form-group">
+                <input type="text" id="secret-name" placeholder="Secret Name (e.g., db_password)">
+            </div>
+            <div class="form-group">
+                <textarea id="secret-value" placeholder="Secret Value"></textarea>
+            </div>
+            <button class="btn btn-add" onclick="addSecret()">Add Secret</button>
+        </div>
+    </div>
+
+    <script>
+        async function loadSecrets() {
+            const res = await fetch('/api/secrets');
+            const data = await res.json();
+            const list = document.getElementById('secrets-list');
+            list.innerHTML = '<h3>Stored Secrets</h3>';
+            for (const name of data.secrets) {
+                const detail = await fetch(`/api/secrets/${name}`);
+                const info = await detail.json();
+                const div = document.createElement('div');
+                div.className = 'secret-item';
+                div.innerHTML = `
+                    <span>
+                        <span class="secret-name">${name}</span>
+                        <span class="secret-meta">created: ${info.created} | rotated: ${info.last_rotated} (${info.rotation_count || 0} times)</span>
+                    </span>
+                    <span>
+                        <button class="btn btn-rotate" onclick="rotateSecret('${name}')">Rotate</button>
+                        <button class="btn btn-delete" onclick="deleteSecret('${name}')">Delete</button>
+                    </span>
+                `;
+                list.appendChild(div);
+            }
+        }
+
+        async function addSecret() {
+            const name = document.getElementById('secret-name').value;
+            const value = document.getElementById('secret-value').value;
+            if (!name || !value) return alert('Name and value required');
+            const res = await fetch('/api/secrets', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name, value})
+            });
+            if (res.ok) {
+                document.getElementById('secret-name').value = '';
+                document.getElementById('secret-value').value = '';
+                loadSecrets();
+            } else {
+                alert('Error adding secret');
+            }
+        }
+
+        async function rotateSecret(name) {
+            if (!confirm(`Rotate secret "${name}"?`)) return;
+            await fetch(`/api/secrets/${name}/rotate`, {method: 'POST'});
+            loadSecrets();
+        }
+
+        async function deleteSecret(name) {
+            if (!confirm(`Delete secret "${name}"?`)) return;
+            await fetch(`/api/secrets/${name}`, {method: 'DELETE'});
+            loadSecrets();
+        }
+
+        loadSecrets();
+        setInterval(loadSecrets, 5000); // refresh every 5s
+    </script>
+</body>
+</html>
